@@ -27,6 +27,9 @@ app.set("view engine", "handlebars");
 // var routes = require("./controllers/catsController.js");
 
 app.get("/", (req, res) => {
+    connection.query("SELECT * FROM burger", (err, data) => {
+        console.table(data);
+    })
     res.render("index");
 });
 
