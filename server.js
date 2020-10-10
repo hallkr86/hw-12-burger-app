@@ -26,23 +26,23 @@ app.set("view engine", "handlebars");
 // // Import routes and give the server access to them.
 var routes = require("./controllers/burgers_controller.js");
 
-//app.use(routes);
+app.use(routes);
 
-app.get("/", (req, res) => {
-    connection.query("SELECT * FROM burger", (err, data) => {
-        console.table(data);
-    })
-    res.render("index");
-});
+// app.get("/", (req, res) => {
+//     connection.query("SELECT * FROM burger", (err, data) => {
+//         console.table(data);
+//     })
+//     res.render("index");
+// });
 
 
-app.get("/api/config", (req, res) => {
-    res.json({
-        success: true
-    });
-});
+// app.get("/api/config", (req, res) => {
+//     res.json({
+//         success: true
+//     });
+// });
 
-// app.use(routes);
+
 
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, function() {
