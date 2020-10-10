@@ -1,18 +1,19 @@
 <div class="row">
-    <div class="col-sm-12"></div>
-    <div class="col-sm-2 col-md-2 col-lg-2">
-
-
-<h1>Eat Da Burger!</h1>
-  <img src="https://lh3.googleusercontent.com/proxy/R2IgPi1eUc_5UudC9Zj1iU6Mqw2kk4iI4c4SH5DOGf__4k81VzsJvJT0JWNqZj2tGhJBuhDLr-mfjXNWGd8-eeaPIcIG4ShPw2Z4" alt = burger/>
-
+  <div class="col-sm-12 text-center">
+    <h1>Eat Da Burger!</h1>
   </div>
-    <div class="col-sm-5 col-md-5 col-lg-5"></div>
+</div>  
+<br>
+
+<div class="row">
+<div class="col-md-12 text-center">
+  <img src="https://lh3.googleusercontent.com/proxy/R2IgPi1eUc_5UudC9Zj1iU6Mqw2kk4iI4c4SH5DOGf__4k81VzsJvJT0JWNqZj2tGhJBuhDLr-mfjXNWGd8-eeaPIcIG4ShPw2Z4" alt = "burger"/>
+</div
 </div>
+
 <hr>
 <div class="row">
-    <div class="col-sm-1 col-md-1 col-lg-1"></div>
-    <div class="col-sm-5 col-md-5 col-lg-5">
+    <div class="col-md-5">
 
 <h2>Burgers that are not devoured!</h2>
 
@@ -23,9 +24,10 @@
     {{/unless}}
   {{/each}}
 </ul>
-
 </div>
-    <div class="col-sm-5 col-md-5 col lg-5">
+
+    
+<div class="col-md-5">
 
 <h2>Burgers that are devoured!</h2>
 
@@ -36,7 +38,7 @@
     {{/if}}
   {{/each}}
 </ul>
-
+</div>
 </div>
     <div class="col-sm-1 col-md-1 col-lg-1"></div>
 </div>
@@ -51,13 +53,13 @@
 
   <div class="form-group">
     <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="name">
+    <input type="text" id="ca" name="burger_name">
   </div>
 
   <div class="form-group">
     <label for="devoured">Devoured?</label><br>
-    <input type="radio" name="devoured" value="1" checked> Devoured!<br>
-    <input type="radio" name="devoured" value="0"> Not Devoured..What are you waiting for?
+    <button type="submit" name="devoured" value="1" checked> Devoured!<br>
+    <button type="submit" name="devoured" value="0"> Not Devoured..What are you waiting for?
   </div>
 
   <button type="submit">Add Burger</button>
