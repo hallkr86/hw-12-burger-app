@@ -1,7 +1,7 @@
 $(function() {
-    $(".change-devour").on("click", function(event) {
+    $(".change-burger").on("click", function(event) {
       var id = $(this).data("id");
-      var newDevour = $(this).data("newdevour");
+      var newDevoured = $(this).data("newdevoured");
   
       var newDevoured = {
         devoured: newDevour
@@ -10,10 +10,10 @@ $(function() {
       // Send the PUT request.
       $.ajax("/api/burgers/" + id, {
         type: "PUT",
-        data: newDevoured
+        data: {newDevoured: true}
       }).then(
         function() {
-          console.log("changed devour to", newDevour);
+          console.log("changed devoured to", newDevoured);
           // Reload the page to get the updated list
           location.reload();
         }
@@ -24,15 +24,15 @@ $(function() {
       // Make sure to preventDefault on a submit event.
       event.preventDefault();
   
-      var newDevour = {
-        name: $("#ca").val().trim(),
-        devoured: $("[name=devoured]:checked").val().trim()
+      var newBurger = {
+        burger_name: $("#bu").val().trim(),
+        newdevoured: false,
       };
   
       // Send the POST request.
       $.ajax("/api/burgers", {
         type: "POST",
-        data: newDevour
+        data: newBurger
       }).then(
         function() {
           console.log("created new burger");
