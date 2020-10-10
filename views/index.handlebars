@@ -1,24 +1,49 @@
+<div class="row">
+    <div class="col-sm-5 col-md-5 col-lg-5"></div>
+    <div class="col-sm-2 col-md-2 col-lg-2">
+
+
 <h1>Eat Da Burger!</h1>
+
+  </div>
+    <div class="col-sm-5 col-md-5 col-lg-5"></div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-sm-1 col-md-1 col-lg-1"></div>
+    <div class="col-sm-5 col-md-5 col-lg-5">
 
 <h2>Burgers that are not devoured!</h2>
 
 <ul>
   {{#each burgers}}
     {{#unless devoured}}
-      {{> burger-block devoured=true}}
+      {{> burgers/burger-block devoured=true}}
     {{/unless}}
   {{/each}}
 </ul>
+
+</div>
+    <div class="col-sm-5 col-md-5 col lg-5">
 
 <h2>Burgers that are devoured!</h2>
 
 <ul>
   {{#each burgers}}
     {{#if devoured}}
-      {{> burger-block devoured=false}}
+      {{> burgers/burger-block devoured=false}}
     {{/if}}
   {{/each}}
 </ul>
+
+</div>
+    <div class="col-sm-1 col-md-1 col-lg-1"></div>
+</div>
+<hr>
+
+<div class="row">
+    <div class="col-sm-4 col-md-4 col-lg-4"></div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
 
 <h2>Add a Burger</h2>
 <form class="create-form">
@@ -36,3 +61,7 @@
 
   <button type="submit">Add Burger</button>
 </form>
+
+ </div>
+    <div class="col-sm-4 col-md-4 col-lg-4"></div>
+</div>
